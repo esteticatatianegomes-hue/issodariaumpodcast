@@ -917,7 +917,7 @@ header.scrolled {
     100% { transform: rotate(360deg); }
 }
 
-.pacote-box > * {
+.pacote-box > *:not(.pacote-glow) {
     position: relative;
     z-index: 1;
 }

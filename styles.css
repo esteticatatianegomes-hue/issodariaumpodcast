@@ -321,7 +321,7 @@ header.scrolled {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     color: var(--color-brown-dark);
     margin-bottom: 1.5rem;
     text-transform: uppercase;
@@ -403,10 +403,18 @@ header.scrolled {
     animation-delay: 0s;
 }
 
-.card-2 {
-    bottom: 15%;
-    left: -10%;
-    animation-delay: -3s;
+.card-3 {
+    top: 60%;
+    right: -10%;
+    padding: 0.5rem;
+    animation-delay: -1.5s;
+}
+
+.insta-print {
+    width: 140px;
+    height: auto;
+    display: block;
+    border-radius: calc(var(--border-radius-md) - 5px);
 }
 
 @keyframes float {
@@ -432,7 +440,7 @@ header.scrolled {
     }
     
     .card-1 { right: 5%; }
-    .card-2 { left: 5%; }
+    .card-3 { display: none; }
 }
 
 /* ==========================================================================
@@ -863,12 +871,34 @@ header.scrolled {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-lg);
     padding: 4rem 3rem;
-    max-width: 700px;
+    max-width: 1000px;
     width: 100%;
     position: relative;
     box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-    text-align: center;
+    text-align: left;
     overflow: hidden;
+}
+
+.pacote-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.local-img {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-premium);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .pacote-content-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
 
 .pacote-glow {
@@ -919,6 +949,23 @@ header.scrolled {
 .premium-list i {
     color: var(--color-caramel);
     font-size: 1.4rem;
+}
+
+.premium-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--color-caramel);
+    color: var(--color-white);
+    padding: 0.5rem 2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom-left-radius: var(--border-radius-lg);
+    box-shadow: -5px 5px 20px rgba(0,0,0,0.3);
+    z-index: 2;
 }
 
 /* ==========================================================================
@@ -1023,6 +1070,10 @@ header.scrolled {
     line-height: 1.1;
     text-shadow: 0 10px 30px rgba(0,0,0,0.5);
     margin-top: 5rem;
+}
+
+.cta-diferencial {
+    margin-top: 3.5rem;
 }
 
 /* ==========================================================================

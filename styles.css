@@ -1284,3 +1284,144 @@ header.scrolled {
         padding: 2rem 1.5rem;
     }
 }
+
+/* ==========================================================================
+   LINKTREE (PÁGINA DE LINKS INICIAL)
+   ========================================================================== */
+.linktree-body {
+    background-color: #0a0503; /* Fundo escuro premium */
+    background-image: radial-gradient(circle at 50% 0%, #2c160d 0%, #0a0503 60%);
+    color: var(--color-beige);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 1rem;
+}
+
+.linktree-container {
+    width: 100%;
+    max-width: 600px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linktree-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.linktree-logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 30px rgba(185, 118, 69, 0.3);
+    border: 2px solid var(--color-caramel);
+}
+
+.linktree-title {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    color: var(--color-beige);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.linktree-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    opacity: 0.8;
+    color: var(--color-beige);
+}
+
+.linktree-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.link-card {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.link-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(185, 118, 69, 0.4);
+    border-color: rgba(185, 118, 69, 0.5);
+}
+
+.link-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s ease;
+}
+
+.link-card:hover .link-card-bg {
+    transform: scale(1.1);
+}
+
+.link-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(10,5,3,0.92), rgba(10,5,3,0.7));
+    z-index: 1;
+    transition: background 0.4s ease;
+}
+
+.link-card:hover .link-card-overlay {
+    background: linear-gradient(to right, rgba(10,5,3,0.85), rgba(10,5,3,0.5));
+}
+
+.link-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 1rem;
+    color: var(--color-white);
+}
+
+.link-card-content i {
+    font-size: 2rem;
+    color: var(--color-caramel-light);
+    transition: transform 0.4s ease;
+}
+
+.link-card:hover .link-card-content i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.link-card-content span {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+}
